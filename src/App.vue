@@ -1,34 +1,28 @@
 <template>
   <div id="app">
-    <action v-bind:message="messageAction"></action>
-    <grid v-bind:photos="photos"></grid>
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
+
 <script>
-  import action from './components/action'
-  import grid from './components/grid'
-  export default {
-    name: 'App',
-    components: { action, grid },
-    data: function () {
-      return {
-        photos: [
-          {
-            id: 0,
-            url: "https://i.imgur.com/p3IKY9G.jpg"
-          }
-        ],
-        messageAction: "It's working !"
-      }
-    }
+import HelloWorld from './components/HelloWorld.vue'
+
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
   }
+}
 </script>
+
 <style>
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    font-family: Arial;
-  }
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 </style>
